@@ -29,7 +29,7 @@ pipeline {
 		 body: "${currentBuild.result}: ${BUILD_URL}", 
 		 compressLog: true, 
 		 subject: "Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}", 
-		 to: 'shadowmurloc63@gmail.com'
+		 to: 'wiktorligeza@gmail.com'
 		
     	}
     	
@@ -37,7 +37,7 @@ pipeline {
 		emailext attachLog: true,
 			body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}", 
 			subject: ' Jenkins notification', 
-			to: 'shadowmurloc63@gmail.com'
+			to: 'wiktorligeza@gmail.com'
     	}
     }
 }
