@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              sh 'curl -sL https://deb.nodesource.com/setup_14.x | bash -'
+              //sh 'curl -sL https://deb.nodesource.com/setup_14.x | bash -'
                 sh 'apt-get install nodejs -y'
                 sh 'npm install --global --force yarn'
 		echo 'Building....'
