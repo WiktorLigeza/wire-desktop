@@ -4,12 +4,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+              sh 'curl -sL https://deb.nodesource.com/setup_14.x | bash -'
+                sh 'apt-get install nodejs -y'
+                sh 'npm install --global --force yarn'
 		echo 'Building....'
+                              sh 'yarn build:linux'
 		}
 	}
 	stage('Test') {
 		steps {
 			echo 'Testing....'
+			sh 'npm run test'
+			
 		}
         }
         stage('Deploy') {
